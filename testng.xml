@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <!-- Test 1 -->
+    <test verbose="2" preserve-order="true" name="Class level execution">
+        <classes> <!-- Run all the methods inside a particular class -->
+            <class name="banking.day1.InternetBanking">
+            </class>
+        </classes>
+    </test>
+    <!-- Test 2 -->
+    <test name="Method level execution">
+        <classes>
+            <class name="banking.day1.HousingLoan">
+                <methods> <!-- excluding particular test method -->
+                    <exclude name="homeLoanCheckDocuments"/>
+                </methods>
+            </class>
+            <class name="banking.day1.MobileApp">
+                <methods> <!-- including particular test method -->
+                    <include name="mobileAppLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- Test 3 -->
+    <test name="package level execution">
+        <packages>
+            <package name="banking.day1"></package>
+        </packages>
+    </test>
+
+    <!-- Test 4  using regex to exclude method-->
+    <test name="Regex exclude">
+        <classes>
+            <class name="banking.day1.MobileApp">
+                <methods> <!-- exlcudes method name starts with the word 'mobile'-->
+                    <exclude name="mobile.*"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Check the run console to see what are the test methods are execute from each test-->
+
+</suite>
