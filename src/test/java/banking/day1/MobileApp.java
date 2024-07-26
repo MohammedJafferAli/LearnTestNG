@@ -4,18 +4,18 @@ import org.testng.annotations.Test;
 
 public class MobileApp {
 
-    @Test
+    @Test(groups = {"Smoke"})
     public void mobileAppLogin()
     {
-        System.out.println("Log-in into internet banking");
+        System.out.println("Log-in into Mobile app banking");
     }
     @Test(priority = 10)
     public void mobileAppLogout()
     {
-        System.out.println("Logout from internet banking");
+        System.out.println("Logout from Mobile app banking");
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void mobileAppStatement()
     {
         System.out.println("Your statement....");
@@ -24,7 +24,7 @@ public class MobileApp {
     @Test
     public void mobileAppVerifyUser()
     {
-        System.out.println("Your statement....");
+        System.out.println(" Authenticate Mobile app user ...");
     }
 
 }

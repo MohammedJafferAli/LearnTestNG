@@ -88,8 +88,40 @@ To create a testng.xml from the first time content click on the project -> selec
 </suite>
 
 ```
+### TestNG Annotations
+
+TestNG Annotation is a piece of code which is inserted inside a program or business logic used to control the flow of execution of test methods.
+
+The Order of execution. The same is maintained in the testng.xml file too.
+1. @BeforeSuite
+2. @BeforeTest
+3. @BeforeClass
+4. @BeforeMethod 
+5. @Test 
+6. @AfterMethod 
+7. @AfterClass 
+8. @AfterTest 
+9. @AfterSuite
+
+#### TestNG Annotation Attributes 
+
+There are many annotation attributes are available in testng and few of them can be used only with particular annotation.
+To know more about this, check this site and get the compatible one : [TestNG Annotation Attributes](https://testng.org/annotations.html)
+
+*commonly used test annotation attributes*
+
+1. enabled
+2. groups
+3. dependsOnMethods
+4. dependsOnGroups
+5. priority
+6. timeOut
+7. description
+8. **dataProvider**
+9. **dataProviderClass**
 
 
 
 #### **Important notes**
 1. Whenever there are any change in the maven project, then build the project first before taking any other action.
+2. The order execution in testng.xml and the annotations are same and execute them in the same sequence.

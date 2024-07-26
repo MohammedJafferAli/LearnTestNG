@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class InternetBanking {
 
-    @Test
+    @Test(groups = {"Smoke"})
     public void internetBankLogin()
     {
         System.out.println("Log-in into internet banking");
@@ -15,7 +15,7 @@ public class InternetBanking {
         System.out.println("Logout from internet banking");
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void internetBankStatement()
     {
         System.out.println("Your statement....");

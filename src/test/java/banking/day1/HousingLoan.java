@@ -5,21 +5,21 @@ import org.testng.annotations.Test;
 public class HousingLoan {
 
 
-    @Test
+    @Test(groups = {"Smoke"})
     public void homeLoanLogin()
     {
-        System.out.println("Log-in into internet banking");
+        System.out.println("Log-in into housing loan page");
     }
     @Test(priority = 10)
     public void homeLoanLogout()
     {
-        System.out.println("Logout from internet banking");
+        System.out.println("Logout from housing loan");
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void homeLoanCheckDocuments()
     {
-        System.out.println("Logout from internet banking");
+        System.out.println(" Verifying loan documents...");
     }
 
 }

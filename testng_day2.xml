@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Mobile App suite">
+    <!-- Execute only mobile app related test-->
+    <test name="Mobile App Test"/>
+    <packages>
+        <package name="Annotations.day2"/>
+    </packages>
+</suite>
