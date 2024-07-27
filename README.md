@@ -120,7 +120,48 @@ To know more about this, check this site and get the compatible one : [TestNG An
 8. **dataProvider**
 9. **dataProviderClass**
 
+### Parameterization
+Parameterization is used to pass the value to the test either from the testng.xml file config or using separate data provide methods.
+@Parameters annotation can be used at the test method level and the value passed from xml file
+@Test(dataProvider={dataprovider-method-name})
 
+Check banking day 3 classes and the testng_day3.xml
+
+### TestNG Listeners
+
+Listener is defined as interface that modifies the default TestNG’s behavior. As the name suggests Listeners “listen” to the event defined in the selenium script and behave accordingly. It is used in selenium by implementing Listeners Interface. It allows customizing TestNG reports or logs.
+
+Mostly commonly used TestNG listener interface is "ITestListener".
+
+1. onStart
+2. onTestStart 
+3. onTestSuccess 
+4. onTestFailure 
+5. onTestSkipped 
+6. onTestFailed But Within Success Percentage 
+7. onTestFailedWithTimeout 
+8. onFinish
+
+[Learn more about TestNG Listeners](https://www.guru99.com/listeners-selenium-webdriver.html)
+
+### Parallel Test using TestNG
+
+To trigger test in parallel to reduce the execution time. by default execution will happen in sequence. 
+
+To run the tests in parallel there are different ways, and the most commonly used methods are
+1. Define at the suite level so the test will execute in parallel
+
+*how?*
+```dtd
+<suite name="Parameterization suite" parallel="tests" thread-count="2">
+```
+2. Define at the test level so classes will execute in parallel
+*how?*
+```dtd
+<test name="Banking Test" parallel="classes" thread-count="3"/>
+```
+
+I will be adding more topics related to testng in the future. Stay connected!
 
 #### **Important notes**
 1. Whenever there are any change in the maven project, then build the project first before taking any other action.

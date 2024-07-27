@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parameterization suite" parallel="tests" thread-count="2">
+    <test name="Banking Test" parallel="classes" thread-count="3"/>
+    <listeners>
+        <listener class-name="TestNGListeners.ListenerClass"/>
+    </listeners>
+    <parameter name="URL" value="mybank.com"/>
+    <!-- Execute only mobile app related test-->
+    <test name="Parameterize test methods at suite level"/>
+    <packages>
+        <package name="banking.day3"/>
+
+    </packages>
+</suite>
